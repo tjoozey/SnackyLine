@@ -1,0 +1,50 @@
+<html style="min-height: 423px;"><head>
+	<title>Snacky Line</title>
+	<meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+			background-image:url('asset/bg.png');
+        }
+    </style>
+
+	<script src="phaser.min.js"></script>
+	<script src="js/snackyline.min.js"></script>
+	<!--<script src="js/utilsound.js"></script>
+	<script src="js/utilsave.js"></script>
+	<script src="js/tileutil.js"></script>
+	<script src="js/matchutil.js"></script>
+	<script src="js/boot.js"></script>
+	<script src="js/preloader.js"></script>
+	<script src="js/title.js"></script>
+	<script src="js/games.js"></script>
+	<script src="js/credit.js"></script>
+	<script src="js/highscore.js"></script>
+	<script src="js/tutorial.js"></script>-->
+
+</head>
+<body>
+
+<script type="text/javascript">
+
+(function () {
+	//	No parameters given, which means no default state is created or started
+    var game = new Phaser.Game(640, 960, Phaser.AUTO);
+
+	game.state.add('boot', MatchMaker.Boot, true);
+	game.state.add('preloader', MatchMaker.Preloader);
+	game.state.add('title', MatchMaker.Title);
+	game.state.add('games', MatchMaker.Games);
+	game.state.add('highscore', MatchMaker.Highscore);
+	game.state.add('tutorial', MatchMaker.Tutorial);
+	game.state.add('credit', MatchMaker.Credit);
+})();
+
+</script>
+</body></html>
